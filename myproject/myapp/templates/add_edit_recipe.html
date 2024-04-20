@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if editing %}
+        <h1>Редактировать рецепт</h1>
+    {% else %}
+        <h1>Добавить новый рецепт</h1>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% if editing %}Сохранить изменения{% else %}Добавить рецепт{% endif %}</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой кулинарный блог</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'add_recipe' %}">Добавить рецепт</a></li>
+                <li><a href="{% url 'login' %}">Войти</a></li>
+                <li><a href="{% url 'register' %}">Зарегистрироваться</a></li>
+                <li><a href="{% url 'logout' %}">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        &copy; 2023 Мой кулинарный блог
+    </footer>
+</body>
+</html>
